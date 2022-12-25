@@ -110,7 +110,6 @@ resource "aws_security_group" "sg-nodejs-instance" {
 
 # INSTANCE
 resource "aws_instance" "nodejs1" {
-  #ami = data.aws_ami.aws-linux.id
   ami = "ami-0b5eea76982371e91"
   instance_type = "t2.micro"
   subnet_id = aws_subnet.subnet1.id
@@ -121,7 +120,7 @@ resource "aws_instance" "nodejs1" {
     type        = "ssh"
     host        = self.public_ip
     user        = "ec2-user"
-    private_key = file(var.private_key_path)
+    #private_key = file(var.private_key_path)
   }
 }
 
