@@ -1,9 +1,13 @@
 # //////////////////////////////
 # VARIABLES
 # //////////////////////////////
-#variable "aws_access_key" {}
+variable "aws_access_key" {
+  default = "AKIAXFXVCGSTW5H6GAIU"
+}
 
-#variable "aws_secret_key" {}
+variable "aws_secret_key" {
+  default = "kkN6gGRGf4+fuWpY75b6u3GbkjYfTNGZqPB854ma"
+}
 
 #variable "ssh_key_name" {}
 
