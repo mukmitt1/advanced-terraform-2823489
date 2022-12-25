@@ -132,7 +132,7 @@ resource "aws_instance" "nodejs1" {
     device_index         = 0
     network_interface_id = aws_network_interface.web-server-nic.id
   }
-
+}
 
 # //////////////////////////////
 # DATA
