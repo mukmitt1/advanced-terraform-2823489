@@ -110,7 +110,7 @@ resource "aws_security_group" "sg-nodejs-instance" {
 
 
 resource "aws_network_interface" "web-server-nic" {
-  subnet_id       = aws_subnet.subnet-1.id
+  subnet_id       = aws_subnet.subnet1.id
   private_ips     = ["172.16.1.50"]
   security_groups = [aws_security_group.sg-nodejs-instance.id]
 }
