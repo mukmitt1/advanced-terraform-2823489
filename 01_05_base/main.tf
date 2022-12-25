@@ -51,7 +51,7 @@ resource "aws_subnet" "subnet1" {
   cidr_block = var.subnet1_cidr
   vpc_id = aws_vpc.vpc1.id
   map_public_ip_on_launch = "true"
-  availability_zone = data.aws_availability_zones.available.names[1]
+  availability_zone = "us-east-1a"
 }
 
 # INTERNET_GATEWAY
