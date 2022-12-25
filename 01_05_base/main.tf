@@ -108,13 +108,30 @@ resource "aws_security_group" "sg-nodejs-instance" {
   }
 }
 
-# INSTANCE
-resource "aws_instance" "nodejs1" {
-  ami = "ami-0b5eea76982371e91"
-  instance_type = "t3.nano"
-  subnet_id = aws_subnet.subnet1.id
-  key_name               = var.ssh_key_name
+
+resource "aws_network_interface" "web-server-nic" {
+  subnet_id       = aws_subnet.subnet-1.id
+  private_ips     = ["172.16.1.50"]
+  security_groups = [aws_security_group.allow_web.id]
 }
+
+resource "aws_eip" "one" {
+  vpc                       = true
+  network_interface         = aws_network_interface.web-server-nic.id
+  associate_with_private_ip = "172.16.1.50"
+  depends_on                = [aws_internet_gateway.gw]
+}
+
+
+resource "aws_instance" "nodejs1" {
+  ami               = "ami-0b5eea76982371e91" # Ubuntu 18.04
+  instance_type     =  var.instance_type
+  key_name          = var.ssh_key_name
+
+  network_interface {
+    device_index         = 0
+    network_interface_id = aws_network_interface.web-server-nic.id
+  }
 
 
 # //////////////////////////////
