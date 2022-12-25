@@ -134,7 +134,7 @@ data "aws_availability_zones" "available" {
 
 data "aws_ami" "aws-linux" {
   most_recent = true
-  owners      = ["amazon"]
+  owners      = ["self"]
 
   filter {
     name   = "name"
