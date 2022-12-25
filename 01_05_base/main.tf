@@ -111,7 +111,7 @@ resource "aws_security_group" "sg-nodejs-instance" {
 # INSTANCE
 resource "aws_instance" "nodejs1" {
   ami = "ami-0b5eea76982371e91"
-  instance_type = "t2.micro"
+  instance_type = "t3.nano"
   subnet_id = aws_subnet.subnet1.id
   key_name               = var.ssh_key_name
 }
