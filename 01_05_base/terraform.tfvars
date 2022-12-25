@@ -10,4 +10,4 @@ aws_secret_key = "kkN6gGRGf4+fuWpY75b6u3GbkjYfTNGZqPB854ma"
 
 ssh_key_name = "tf_key"
 
-private_key_path = ""
+#private_key_path = ""
