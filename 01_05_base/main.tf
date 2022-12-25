@@ -1,17 +1,17 @@
 # //////////////////////////////
 # VARIABLES
 # //////////////////////////////
-variable "aws_access_key" {
-  default = "AKIAXFXVCGSTW5H6GAIU"
-}
+variable "aws_access_key" {}
+#  default = "AKIAXFXVCGSTW5H6GAIU"
+#}
 
-variable "aws_secret_key" {
-  default = "kkN6gGRGf4+fuWpY75b6u3GbkjYfTNGZqPB854ma"
-}
+variable "aws_secret_key" {}
+#  default = "kkN6gGRGf4+fuWpY75b6u3GbkjYfTNGZqPB854ma"
+#}
 
-variable "ssh_key_name" {
-  default = "tf_key"
-}
+variable "ssh_key_name" {}
+#  default = "tf_key"
+#}
 
 #variable "private_key_path" {}
 
