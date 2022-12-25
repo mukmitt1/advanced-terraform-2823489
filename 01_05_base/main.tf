@@ -129,9 +129,6 @@ resource "aws_instance" "nodejs1" {
 # //////////////////////////////
 # DATA
 # //////////////////////////////
-data "aws_availability_zones" "available" {
-  state = "available"
-}
 
 
 # //////////////////////////////
