@@ -11,8 +11,3 @@ aws_secret_key = "kkN6gGRGf4+fuWpY75b6u3GbkjYfTNGZqPB854ma"
 ssh_key_name = "tf_key"
 
 #private_key_path = ""
-
-variable "instance_type" {
-  description = "Type of EC2 instance to provision"
-  default     = "t3.nano"
-}

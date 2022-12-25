@@ -125,7 +125,7 @@ resource "aws_eip" "one" {
 
 resource "aws_instance" "nodejs1" {
   ami               = "ami-0b5eea76982371e91" # Ubuntu 18.04
-  instance_type     =  var.instance_type
+  instance_type     =  t3.nano
   key_name          = var.ssh_key_name
 
   network_interface {
